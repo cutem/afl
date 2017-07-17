@@ -17,6 +17,54 @@ is 2.41b. If you're stuck on an earlier release, it's strongly advisable
 to get on with the times.
 
 --------------
+Version 2.47b:
+--------------
+
+  - Fixed cwd handling in afl-tmin. Spotted by Jakub Wilk.
+
+--------------
+Version 2.46b:
+--------------
+
+  - libdislocator now supports AFL_LD_NO_CALLOC_OVER for folks who do not
+    want to abort on calloc() overflows.
+
+  - Made a minor fix to libtokencap. Reported by Daniel Stender.
+
+--------------
+Version 2.45b:
+--------------
+
+  - Added strstr, strcasestr support to libtokencap. Contributed by
+    Daniel Hodson.
+
+  - Fixed a resumption offset glitch spotted by Jakub Wilk.
+
+  - There are definitely no bugs in afl-showmap -c now.
+
+--------------
+Version 2.44b:
+--------------
+
+  - Added a visual indicator of ASAN / MSAN mode when compiling. Requested
+    by Jakub Wilk.
+
+  - Added support for afl-showmap coredumps (-c). Suggested by Jakub Wilk.
+
+  - Added LD_BIND_NOW=1 for afl-showmap by default. Although not really useful,
+    it reportedly helps reproduce some crashes. Suggested by Jakub Wilk.
+
+  - Added a note about allocator_may_return_null=1 not always working with
+    ASAN. Spotted by Jakub Wilk.
+
+--------------
+Version 2.43b:
+--------------
+
+  - Added AFL_NO_ARITH to aid in the fuzzing of text-based formats.
+    Requested by Jakub Wilk.
+
+--------------
 Version 2.42b:
 --------------
 
